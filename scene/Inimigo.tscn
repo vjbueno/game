@@ -64,10 +64,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 166.265, 101.864 )
+extents = Vector2( 152.678, 101.864 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 98.8253, 41.3779 )
+extents = Vector2( 100.24, 44.2061 )
 
 [node name="Inimigo" type="Node2D"]
 script = ExtResource( 1 )
@@ -87,7 +87,7 @@ shape = SubResource( 2 )
 [node name="DanoInimigo1" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DanoInimigo1"]
-position = Vector2( -21.2132, -110.309 )
+position = Vector2( -25.4558, -123.037 )
 shape = SubResource( 3 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
