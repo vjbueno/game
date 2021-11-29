@@ -48,3 +48,7 @@ func _physics_process(delta):
 func morte_player():
 	$AnimatedSprite.animation = "morrendo"
 	isDead = true
+
+func _on_AnimatedSprite_animation_finished():
+	if ($AnimatedSprite.animation == "morrendo"):
+		get_tree().change_scene("res://scene/GameOver.tscn")

@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Hud/Pokemon Solid.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/background principal.jpg" type="Texture" id=2]
+[ext_resource path="res://script/Menu.gd" type="Script" id=3]
+[ext_resource path="res://sprite/ninja/Dead__009.png" type="Texture" id=4]
+[ext_resource path="res://sprite/cat/Slide (10).png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 110
+outline_size = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 87
+outline_size = 6
+outline_color = Color( 0.588235, 0.0588235, 0.0352941, 1 )
+font_data = ExtResource( 1 )
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="background principal" type="Sprite" parent="."]
+position = Vector2( 649.971, 361.682 )
+texture = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.049
+anchor_top = 0.067
+anchor_right = 0.869
+anchor_bottom = 0.324
+margin_left = 0.00551605
+margin_top = 0.180065
+margin_right = 0.3255
+margin_bottom = -0.019928
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.870588, 0.784314, 0.631373, 1 )
+custom_colors/font_outline_modulate = Color( 0.588235, 0.0588235, 0.0352941, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Game Over"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star" type="Button" parent="CanvasLayer/Label"]
+anchor_left = -0.081
+anchor_top = 2.161
+anchor_right = 0.435
+anchor_bottom = 3.097
+margin_left = 42.1206
+margin_top = 5.96802
+margin_right = 41.6806
+margin_bottom = 7.82401
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.870588, 0.784314, 0.631373, 1 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="CanvasLayer/Label"]
+anchor_left = 0.6
+anchor_top = 2.115
+anchor_right = 1.115
+anchor_bottom = 3.063
+margin_left = 20.6777
+margin_top = 0.0564575
+margin_right = 21.0777
+margin_bottom = 0.0644226
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.870588, 0.784314, 0.631373, 1 )
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dead__009" type="Sprite" parent="CanvasLayer/Label"]
+position = Vector2( 715.863, 164.806 )
+scale = Vector2( 0.707799, 0.55472 )
+texture = ExtResource( 4 )
+
+[node name="Slide (10)" type="Sprite" parent="CanvasLayer/Label"]
+position = Vector2( 216.927, 200.765 )
+scale = Vector2( 0.619338, 0.55472 )
+texture = ExtResource( 5 )
+
+[connection signal="pressed" from="CanvasLayer/Label/Star" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Label/Menu" to="." method="_on_Menu_pressed"]

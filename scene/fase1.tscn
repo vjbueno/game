@@ -603,8 +603,8 @@ font_data = ExtResource( 30 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 37 )
-region = Rect2( 0, 0, 748, 214 )
+atlas = ExtResource( 34 )
+region = Rect2( 0, 0, 771, 219 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
@@ -618,14 +618,14 @@ region = Rect2( 0, 0, 771, 219 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 34 )
-region = Rect2( 0, 0, 771, 219 )
+atlas = ExtResource( 37 )
+region = Rect2( 0, 0, 748, 214 )
 
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
 "frames": [ SubResource( 19 ) ],
 "loop": true,
-"name": "0",
+"name": "2",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 20 ) ],
@@ -640,7 +640,7 @@ animations = [ {
 }, {
 "frames": [ SubResource( 22 ) ],
 "loop": true,
-"name": "2",
+"name": "0",
 "speed": 5.0
 } ]
 
